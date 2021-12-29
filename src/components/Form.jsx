@@ -60,7 +60,7 @@ const Form = () => {
                     </div>
                 )}
             )}
-            <button type='submit'>Submit</button>
+            <button className='button' type='submit'>Submit</button>
         </form>
     )
 }
