@@ -8,10 +8,10 @@ To spin this React form builder up in your local environment:
 NB! The data is not persisted anywhere, only logged to the console and posted to an alert on submit.
 
 ### About formAlly
-Dynamically generate forms from JSON data representing the form field schema. The current functionality constrained to the format of the example JSON data.
+Dynamically generate forms from JSON data representing the form field schema. The current functionality is tested for the example JSON data format and may not generalize to your JSON form schema data.
 
 #### Specs
-Using React...
+Implemented as a React app:
 
 1. From a JSON string of form data that describes the form fields, dynamically generate the form and render to the browser.
 
@@ -99,7 +99,7 @@ Formally:
 - Title/instruction text + Form container
 
 Form: 
-- Map JSON data to generic field elements generated via Field component, including conditional fields (via condition evaluation function)
+- Map JSON data to generic field elements generated via a Field component, taking into consideration conditionality
 
 Field: 
-- Generate generic field element, to be rendered per props passed from Form and new values being managed via state (and monitored as trigger events for the conditional field)
+- Generate generic field element; props passed from the Form component and value updates managed via React state and an event handler
