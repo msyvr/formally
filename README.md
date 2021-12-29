@@ -1,7 +1,5 @@
 ### Use
-This is a React app for dynamically generating forms from JSON form schema. 
-
-To spin it up in your local environment:
+To spin this React form builder up in your local environment:
 - make sure you have javascript, node, npm, react installed
 - fork the repo, save to your environment and cd to the app folder
 - npm start
