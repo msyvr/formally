@@ -17,7 +17,7 @@ const Form = () => {
         "phone_number":'',
         "job_title":'',
         "date_of_birth":'',
-        "parental_consent":''});
+        "parental_consent":false});
     const [conditionMet, setConditionMet] = useState(false)
     const [isDoB, setisDoB] = useState(false)
   
