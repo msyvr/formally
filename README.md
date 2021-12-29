@@ -3,7 +3,7 @@ To spin this React form builder up in your local environment:
 - make sure you have javascript, node, npm, react installed
 - fork the repo, save to your environment and cd to the app folder
 - npm start
-- example data in formdata.json: feel free to replace with other json form scheme (no guarantees!)
+- example data in formdata.json: feel free to replace with other json form schema (no guarantees!)
 
 NB! The data is not persisted anywhere, only logged to the console and posted to an alert on submit.
 
