@@ -1,19 +1,17 @@
 ### Use
-This is a React app for dynamically generating forms from JSON form schema. 
-
-To spin it up in your local environment:
+To spin this React form builder up in your local environment:
 - make sure you have javascript, node, npm, react installed
 - fork the repo, save to your environment and cd to the app folder
 - npm start
-- example data in formdata.json: feel free to replace with other json form scheme (no guarantees!)
+- example data in formdata.json: feel free to replace with other json form schema (no guarantees!)
 
 NB! The data is not persisted anywhere, only logged to the console and posted to an alert on submit.
 
 ### About formAlly
-Dynamically generate forms from a JSON file. The JSON data outlines the form field schema. Current functionality constrained to the format of the example JSON data.
+Dynamically generate forms from JSON data representing the form field schema. The current functionality constrained to the format of the example JSON data.
 
 #### Specs
-Use React app to generate a form according to:
+Using React...
 
 1. From a JSON string of form data that describes the form fields, dynamically generate the form and render to the browser.
 
@@ -23,11 +21,11 @@ Use React app to generate a form according to:
 
 ##### The conditional element and the specific parameters of its conditionality trigger whether it is rendered on the form. I.e., the triggering input field is field.name = date_of_birth, and age < 13 triggers the render.
 
-##### A general solution which extracts values from the object {conditional:{name:'...', show_if:'...'}} seems important; I'll pursue that on my own as a follow up exercise.
+##### A general solution which extracts values from the object {conditional:{name:'...', show_if:'...'}} would be ideal (TO DO).
 
 3. Return or console.log the user-input form data to a JS object. 
 
-##### On submit, console.log plus an alert for the user.
+##### On submit, console.log plus an alert for the user. The alert text is not formatted.
 
 4. Notes on field input validation and improving UI/UX beyond basic functionality; ideas for improvement.
 
@@ -49,7 +47,7 @@ Use React app to generate a form according to:
 
 - Privacy measures such as an option to mask the form temporarily or mask specific fields by default (with a view option for the user to display by choice).
 
-- Enable user to login and prepopulate form fields with prior data.
+- Enable user to login and prepopulate form fields with prior data. Also, prompt the user to check their inputs prior to submission (formatted alert?).
 
 - Optimize for mobile.
 
@@ -57,7 +55,7 @@ Use React app to generate a form according to:
 
 - An option to revisit the form to edit values would be a user-friendly feature; this may or may not make sense for the form owner so consider on a case by case basis.
 
-- Design! Wanting to keep it light and not fiddle with a package, I used simple CSS flexboxes and a minimum of styling. Nice design makes for a better experience.
+- Design! Wanting to keep it light and not fiddle with a package, I used simple CSS flexboxes and a minimum of styling. Nicer design would make for a better experience!
 
 - Notification (alert on submission plus via email) of:
 
