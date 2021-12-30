@@ -25,15 +25,19 @@ Implemented as a React app:
 
 3. Return or console.log the user-input form data to a JS object. 
 
-##### On submit, console.log plus an alert for the user. The alert text is not formatted.
+##### On submit, console.log plus an alert for the user both return the current form values.
 
 4. Notes on field input validation and improving UI/UX beyond basic functionality; ideas for improvement.
 
 ##### CURRENT VERSION
 
-- All inputs are required for form submission. The JSON data doesn't include this attribute, so it's calculated based on the date of birth value and toggles the conditional field.
+- Fields are dynamically generated from JSON data structured as objects with multiple key-value pairs that collectively describe a form input field
+    - a "tag" = "input" attribute is required to render as a form input
+    - for objects/fields containing a "conditional" key, the current implementation checks for the value of key = "date_of_birth"; if a value exists and indicates user age < the (hard-coded) minimum age, the conditional field is rendered and its input required
 
-- The required attribute of the conditionally rendered element is dynamic: if rendered, the element is required; if not rendered, it's not required. 
+- All inputs are required for form submission
+    - the example JSON data doesn't include this attribute
+    - it's calculated from date of birth to toggle off 'required' when the conditional field is not rendered
 
 ##### NEXT STEPS / IMPROVEMENTS
 
@@ -41,15 +45,15 @@ Implemented as a React app:
 
 - Accessibility: no accessibility features (yet!). These are critical.
 
-- Guidance: Basic instructions up front (header or top of form), or as info buttons associated with specific fiedls. An option to get assistance (live chat, a forum, ...) or clarification would be really nice. 
+- Guidance for filling in the form: Clear, concise instructions up front (header or top of form) + 'info' buttons with detailed support for individual fields as appropriate. An option to access further assistance (live chat, a forum, contact information,...) would be really nice, if available.
 
-- Input validation: All rendered fields are required, and the email and date fields have a minimal degree of built in validation. More comprehensive validation could include input guidance/correction in real time (e.g., blocking DoBs in the future, or autocompleting email for common services). Units and formatting should be automatically flagged or, ideally, corrected (with user verification/approval).
+- Input validation: All rendered fields are required, and the email and date fields have a minimal degree of built in validation. More comprehensive validation should include input guidance/correction in real time (e.g., blocking DoBs in the future, or autocompleting email for common services). Units and formatting should be automatically flagged or, ideally, corrected (with user verification/approval).
 
 - Privacy measures such as an option to mask the form temporarily or mask specific fields by default (with a view option for the user to display by choice).
 
 - Enable user to login and prepopulate form fields with prior data. Also, prompt the user to check their inputs prior to submission (formatted alert?).
 
-- Optimize for mobile.
+- Optimize responsive design for mobile.
 
 - For longer forms, scroll-based rendering - both to help the task feel less overwhelming, and also to help focus the current input fields.
 
@@ -57,7 +61,7 @@ Implemented as a React app:
 
 - Design! Wanting to keep it light and not fiddle with a package, I used simple CSS flexboxes and a minimum of styling. Nicer design would make for a better experience!
 
-- Notification (alert on submission plus via email) of:
+- Notification (alert + email) of:
 
     - summary of submitted data with next steps/anticipated timeline
     
